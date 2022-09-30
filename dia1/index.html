@@ -42,8 +42,9 @@
       </section>
     </main>
     <script>
+      
       function modificaTexto() {
-        document.getElementsByTagName("p")[1].innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at diam iaculis, mollis tellus vitae, ultricies magna. Fusce fringilla, metus. Xablau'
+        document.getElementsByTagName("p")[1].innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at diam iaculis, mollis tellus vitae, ultricies magna. Fusce fringilla, metus. Xablau'
       }
       modificaTexto();
 
@@ -58,22 +59,21 @@
       trocaCorCenterContent();
 
       function corrigeH1() {
-        document.getElementsByTagName("h1")[0].innerText = 'Exercício - JavaScript';
+        document.getElementsByTagName("h1")[0].innerHTML = 'Exercício - JavaScript';
       }
       corrigeH1();
-
-      function caixaAlta(){
-        const text = document.getElementsByTagName("p")[0].innerText;
-        let caixaAlta = text.toUpperCase();
-        return caixaAlta
-      }
-      caixaAlta();
 
       function imprimeConsole() {
         let impressao = document.getElementsByTagName("p");
         console.log(impressao);
       }
       imprimeConsole();
+
+      function caixaAlta () {
+        const caixaAlta = document.getElementsByTagName("p")[0].innerHTML.toLocaleUpperCase()
+      document.getElementsByTagName("p")[0].innerHTML = caixaAlta
+      }
+      caixaAlta ();      
     </script>
   </body>
 </html>
